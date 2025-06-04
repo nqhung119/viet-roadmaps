@@ -1,0 +1,80 @@
+/* src/styles/CategoryPage.module.css */
+.container {
+  padding: 20px;
+  font-family: 'Arial', sans-serif;
+  /* Thêm padding-top để nội dung không bị che bởi navbar cố định */
+  /* Chiều cao navbar (60px) + khoảng đệm (20px) */
+  padding-top: 80px;
+}
+
+.pageTitle {
+  text-align: center;
+  font-size: 2.2rem;
+  color: #212529;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.pageSubtitle {
+  text-align: center;
+  margin-bottom: 40px; /* Tăng khoảng cách */
+  font-size: 1.1rem;
+  color: #495057;
+}
+
+.regionList {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 20px; /* Khoảng cách giữa các mục */
+  flex-wrap: wrap;
+}
+
+.regionItem {
+  border: 1px solid #ced4da;
+  border-radius: 8px;
+  padding: 20px;
+  min-width: 180px;
+  text-align: center;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.07);
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.regionItem:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 5px 10px rgba(0,0,0,0.12);
+}
+
+.regionLink {
+  text-decoration: none;
+  color: #007bff;
+  font-weight: bold;
+  font-size: 1.1em;
+}
+
+.regionLink:hover {
+  color: #0056b3;
+  text-decoration: underline;
+}
+
+.noRegionsText {
+  text-align: center;
+  color: #6c757d;
+  font-style: italic;
+}
+
+.backLinkContainer {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.backLink {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.backLink:hover {
+  text-decoration: underline;
+}

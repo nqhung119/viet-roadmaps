@@ -2,18 +2,21 @@
   "name": "Cưới hỏi miền Bắc",
   "children": [
     {
-      "name": "Lễ hỏi",
-      "steps": [
-        "Chuẩn bị sính lễ",
-        "Chọn ngày lành tháng tốt",
-        "Lễ rước dâu"
+      "name": "Lễ Hỏi",
+      "attributes": { "description": "Giai đoạn chuẩn bị và các nghi thức trước lễ cưới chính." },
+      "children": [
+        { "name": "Dạm ngõ (Chạm ngõ)" , "attributes": { "details": "Buổi gặp gỡ chính thức đầu tiên giữa hai gia đình." }},
+        { "name": "Ăn hỏi (Đính hôn)", "attributes": { "details": "Nhà trai mang lễ vật sang nhà gái để chính thức xin cưới." } }
       ]
     },
     {
-      "name": "Lễ cưới",
-      "steps": [
-        "Lễ thành hôn",
-        "Tiệc cưới"
+      "name": "Lễ Cưới",
+      "attributes": { "description": "Nghi lễ chính thức diễn ra vào ngày cưới." },
+      "children": [
+        { "name": "Lễ Xin Dâu", "attributes": { "details": "Nhà trai đến nhà gái xin phép đón dâu." } },
+        { "name": "Lễ Đón Dâu (Rước Dâu)", "attributes": { "details": "Đưa cô dâu về nhà chồng." } },
+        { "name": "Lễ Thành Hôn (Tại nhà trai)", "attributes": { "details": "Cô dâu chú rể ra mắt tổ tiên, hai họ." } },
+        { "name": "Tiệc cưới", "attributes": { "details": "Mời khách chung vui và chúc phúc." } }
       ]
     }
   ]

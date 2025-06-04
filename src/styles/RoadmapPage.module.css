@@ -1,0 +1,324 @@
+/* src/styles/RoadmapPage.module.css */
+
+/* General Page Structure & Dark Theme */
+.pageWrapper {
+  background-color: #0f172a; /* slate-900 */
+  color: #e2e8f0; /* slate-200 or similar light gray for text */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* The Navbar component should also be styled with a dark theme for consistency */
+
+.mainContent {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  /* Remove padding-top here, let the hero section handle spacing below navbar */
+}
+
+/* Container for centering content, can be reused */
+.container {
+  padding: 0 1rem; /* Adjusted padding for mobile */
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%; /* Ensure container takes full width on small screens */
+}
+
+@media (min-width: 640px) { /* sm breakpoint */
+  .container {
+    padding: 0 2rem; /* Restore original padding on larger screens */
+  }
+}
+
+
+/* Hero Section (Title and Subtitle) */
+.heroSection {
+  padding: 3rem 1rem 2.5rem 1rem; /* Adjusted padding */
+  text-align: center;
+  background-color: #111827; /* Slightly different dark shade, e.g., gray-900 */
+  border-bottom: 1px solid #374151; /* gray-700 */
+}
+
+.heroTitle {
+  font-size: 2.25rem; /* text-3xl or text-4xl */
+  font-weight: bold;
+  margin-bottom: 0.75rem; /* mb-3 */
+  color: #f9fafb; /* gray-50, very light */
+  line-height: 1.2;
+}
+
+@media (min-width: 640px) { /* sm breakpoint */
+  .heroTitle {
+    font-size: 2.75rem; /* text-4xl or text-5xl */
+  }
+}
+
+.heroSubtitle {
+  font-size: 1.125rem; /* text-lg */
+  color: #d1d5db; /* gray-300 */
+  max-width: 768px; /* md:max-w-3xl */
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
+}
+
+.heroSubtitle strong {
+  color: #60a5fa; /* blue-400 or similar light blue for emphasis */
+}
+
+/* In ../../../styles/RoadmapPage.module.css */
+.loadingText {
+  text-align: center;
+  padding: 20px;
+  font-size: 1.2em;
+  color: #e5e7eb; /* Or your desired text color */
+}
+
+/* Ensure your treeWrapper still has dimensions */
+.treeWrapper {
+  width: 100%;
+  height: 70vh; /* Or a fixed height like 600px */
+  min-height: 500px;
+  border: 1px solid #4b5563; /* Optional: for debugging layout */
+  display: flex; /* Optional: to help center loading text if it's the only child */
+  justify-content: center; /* Optional */
+  align-items: center; /* Optional */
+}
+
+/* Styles for the Node Details Panel */
+.nodeDetailsPanel {
+  background-color: #1f2937; /* slate-800 */
+  color: #e5e7eb; /* gray-200 */
+  padding: 1.5rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem; /* Add margin below the panel */
+  border-radius: 8px;
+  border: 1px solid #4b5563; /* gray-600 */
+  max-width: 800px; /* Limit width */
+  margin-left: auto;
+  margin-right: auto;
+  position: relative; /* For close button positioning */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Add subtle shadow */
+}
+
+.detailsTitle {
+  font-size: 1.5rem; /* text-xl */
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: #f9fafb; /* gray-50 */
+  border-bottom: 1px solid #374151; /* Separator */
+  padding-bottom: 0.75rem;
+}
+
+.detailsDescription {
+  font-size: 1rem; /* text-base */
+  color: #d1d5db; /* gray-300 */
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
+
+.resourcesSection {
+  margin-top: 1.5rem; /* More space above resources */
+}
+
+.resourcesTitle {
+  font-size: 1.125rem; /* text-lg */
+  font-weight: 600; /* semibold */
+  margin-bottom: 0.75rem;
+  color: #f9fafb; /* gray-50 */
+}
+
+.resourcesList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.resourceItem {
+  margin-bottom: 0.5rem;
+}
+
+.resourceLink {
+  color: #60a5fa; /* blue-400 */
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: color 0.2s ease-in-out;
+}
+
+
+/* Styles for custom nodes rendered by react-d3-tree */
+.nodeName {
+  font-size: 0.9rem; /* Adjusted for new node size */
+  font-weight: 600; /* semibold */
+  fill: #e5e7eb; /* gray-200 */
+}
+
+.nodeDescription {
+  font-size: 0.75rem; /* text-xs */
+  fill: #9ca3af; /* gray-400 */
+}
+
+.resourceLink:hover {
+  color: #3b82f6; /* blue-500 */
+  text-decoration: underline;
+}
+
+/* Default link style for react-d3-tree */
+/* These styles target the SVG paths rendered by react-d3-tree */
+.rd3t-link {
+  fill: none;
+  stroke: #60a5fa; /* blue-400 */
+  stroke-width: 2px; /* Adjusted width */
+}
+
+/* Back Links */
+.backLinksContainerDark {
+  padding: 1.5rem 1rem;
+  text-align: center;
+  border-top: 1px solid #374151; /* gray-700 */
+  background-color: #111827; /* Match hero section or a consistent footer dark */
+  display: flex; /* Use flexbox for layout */
+  justify-content: center; /* Center items horizontally */
+  gap: 1rem; /* Add space between links */
+  flex-wrap: wrap; /* Allow links to wrap on smaller screens */
+}
+
+.backLinkDark {
+  display: inline-block;
+  /* Removed margin as gap handles spacing */
+  padding: 0.6rem 1.2rem;
+  background-color: #374151; /* gray-700 */
+  color: #e5e7eb; /* gray-200 */
+  border-radius: 0.375rem; /* rounded-md */
+  text-decoration: none;
+  font-size: 0.875rem; /* text-sm */
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+.backLinkDark:hover {
+  background-color: #4b5563; /* gray-600 */
+  color: #f9fafb; /* gray-50 */
+}
+
+/* Close button for details panel */
+.closeDetailsButton {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: none;
+  border: none;
+  color: #9ca3af; /* gray-400 */
+  font-size: 1rem;
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 4px;
+  transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
+}
+
+
+/* Error Page Styling (Dark Theme) */
+.errorContainerDark {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #0f172a; /* slate-900 */
+}
+
+.errorMessageDark {
+  color: #fca5a5; /* red-400, for better visibility on dark */
+  font-size: 1.125rem; /* text-lg */
+  text-align: center;
+  padding: 3rem 1rem;
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.closeDetailsButton:hover {
+  color: #e5e7eb; /* gray-200 */
+  background-color: #374151; /* gray-700 */
+}
+
+/* --- Old styles (can be removed if not used elsewhere) --- */
+/*
+.container {
+  padding: 20px;
+  font-family: 'Arial', sans-serif;
+  padding-top: 80px;
+}
+
+.pageTitle {
+  text-align: center;
+  font-size: 2.2rem;
+  color: #212529;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.pageSubtitle {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 1.1rem;
+  color: #495057;
+}
+
+.pageSubtitle strong {
+  color: #007bff;
+}
+
+.treeContainer {
+  width: 100%;
+  height: calc(100vh - 220px);
+  border: 1px solid #ced4da;
+  margin-top: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+  overflow: hidden;
+}
+
+.roadmapSvg g.rd3t-label text {
+  font-family: 'balsamiq', Arial, sans-serif !important;
+}
+
+.errorMessage {
+  text-align: center;
+  color: #dc3545;
+  font-size: 1.1rem;
+  margin-top: 30px;
+}
+
+.backLinksContainer {
+  text-align: center;
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.backLink {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.backLink:hover {
+  text-decoration: underline;
+}
+
+.treeLinkDefault {
+  fill: none;
+  stroke: #2b78e4;
+  stroke-width: 3px;
+}
+
+.treeLinkDashed {
+  fill: none;
+  stroke: #2b78e4;
+  stroke-width: 3px;
+  stroke-dasharray: 5, 5;
+}
+*/

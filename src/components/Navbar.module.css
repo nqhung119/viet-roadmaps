@@ -1,0 +1,85 @@
+/* src/components/Navbar.module.css */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #ffffff; /* Màu nền trắng */
+  border-bottom: 1px solid #dee2e6; /* Viền dưới mỏng */
+  position: fixed; /* Cố định */
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000; /* Đảm bảo luôn ở trên cùng */
+  box-sizing: border-box;
+  height: 60px; /* Chiều cao cố định cho navbar */
+}
+
+.navbarBrand {
+  display: flex;
+  align-items: center;
+}
+
+.logoPlaceholder {
+  margin-right: 0.75rem;
+  font-weight: bold;
+  color: #007bff; /* Màu cho placeholder logo */
+}
+
+.brandName {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #343a40; /* Màu tối cho tên trang */
+  text-decoration: none;
+}
+
+.navLinks {
+  display: flex;
+  gap: 2rem; /* Khoảng cách giữa các mục menu */
+}
+
+.navLink {
+  text-decoration: none;
+  color: #495057; /* Màu chữ cho các mục menu */
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.navLink:hover {
+  color: #0056b3; /* Màu khi hover */
+}
+
+.authButtons {
+  display: flex;
+  gap: 1rem;
+}
+
+.authButton {
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: background-color 0.15s ease-in-out, color 0.15s ease-in-out, border-color 0.15s ease-in-out;
+}
+
+.loginButton {
+  color: #007bff;
+  border: 1px solid #007bff;
+}
+
+.loginButton:hover {
+  background-color: #007bff;
+  color: white;
+}
+
+.signupButton {
+  background-color: #007bff; /* Màu xanh dương cho nút đăng ký */
+  color: white;
+  border: 1px solid #007bff;
+}
+
+.signupButton:hover {
+  background-color: #0056b3; /* Màu xanh đậm hơn khi hover */
+  border-color: #0056b3;
+}

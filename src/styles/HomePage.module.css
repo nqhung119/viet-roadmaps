@@ -1,0 +1,86 @@
+/* src/styles/HomePage.module.css */
+.container {
+  padding: 20px;
+  font-family: 'Arial', sans-serif;
+  /* Thêm padding-top để nội dung không bị che bởi navbar cố định */
+  /* Chiều cao navbar (60px) + khoảng đệm (20px) */
+  padding-top: 80px; 
+}
+
+.pageHead {
+  /* Các style cho Head có thể không cần thiết ở đây vì nó không render UI trực tiếp */
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 60px; /* Tăng khoảng cách dưới header */
+}
+
+.header h1 {
+  font-size: 2.8rem; /* Kích thước lớn hơn cho H1 */
+  margin-bottom: 0.75rem;
+  color: #212529; /* Màu chữ đậm hơn */
+  font-weight: 600;
+}
+
+.header h2 {
+  font-size: 1.4rem; /* Kích thước cho H2 */
+  color: #495057; /* Màu chữ nhẹ hơn cho H2 */
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+.mainContent {
+  /* Các style chung cho phần main nếu cần */
+}
+
+.mainContent h2 {
+  text-align: center;
+  margin-bottom: 30px; /* Tăng khoảng cách */
+  color: #343a40;
+  font-size: 1.8rem;
+}
+
+.categoryList {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 25px; /* Tăng khoảng cách giữa các mục */
+  flex-wrap: wrap;
+}
+
+.categoryItem {
+  border: 1px solid #ced4da; /* Viền nhẹ hơn */
+  border-radius: 8px;
+  padding: 25px; /* Tăng padding */
+  min-width: 220px; /* Tăng chiều rộng tối thiểu */
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05); /* Bóng đổ nhẹ nhàng hơn */
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.categoryItem:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.1); /* Bóng đổ rõ hơn khi hover */
+}
+
+.categoryLink {
+  text-decoration: none;
+  color: #007bff; /* Màu xanh cho link */
+  font-size: 1.25em; /* Kích thước chữ lớn hơn */
+  font-weight: bold;
+}
+
+.categoryLink:hover {
+  color: #0056b3; /* Màu xanh đậm hơn khi hover */
+  text-decoration: underline;
+}
+
+.footer {
+  text-align: center;
+  margin-top: 60px; /* Tăng khoảng cách trên footer */
+  padding-top: 25px; /* Tăng padding */
+  border-top: 1px solid #e9ecef; /* Viền nhẹ hơn */
+  color: #6c757d; /* Màu chữ nhẹ hơn cho footer */
+}

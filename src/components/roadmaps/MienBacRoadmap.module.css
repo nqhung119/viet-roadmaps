@@ -1,0 +1,83 @@
+.roadmapContainer {
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    line-height: 1.6;
+    color: #333;
+}
+
+.roadmapTitle {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 30px;
+    font-size: 2em;
+}
+
+.roadmapNode {
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    margin-bottom: 15px;
+    padding: 15px;
+    transition: box-shadow 0.3s ease;
+}
+
+.roadmapNode:hover {
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.nodeName {
+    font-weight: bold;
+    font-size: 1.2em;
+    color: #3498db;
+    margin-bottom: 5px;
+}
+
+.nodeName.hasChildren, .nodeName.clickable {
+    cursor: pointer;
+}
+
+.nodeName.hasChildren::after {
+    content: ' ▼'; /* Simple indicator for expandable sections */
+    font-size: 0.8em;
+    color: #7f8c8d;
+    margin-left: 5px;
+}
+
+.nodeName.hasChildren.expanded::after {
+    content: ' ▲';
+}
+
+.nodeDescription {
+    font-size: 0.95em;
+    color: #555;
+    margin-bottom: 10px;
+    padding-left: 20px;
+    border-left: 3px solid #ecf0f1;
+}
+
+.nodeDetails {
+    font-size: 0.9em;
+    color: #777;
+    background-color: #f9f9f9;
+    border: 1px dashed #ddd;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 4px;
+}
+
+.nodeChildren {
+    margin-left: 20px;
+    padding-left: 20px;
+    border-left: 2px solid #3498db; /* Visual cue for hierarchy */
+    margin-top: 10px;
+}
+
+/* CSS cho body, nếu cần, bạn nên đặt trong _app.js hoặc một file global css */
+/* body {
+    background-color: #f4f7f9;
+} */
