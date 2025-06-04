@@ -1,0 +1,20 @@
+{
+  "name": "Cưới hỏi miền Bắc",
+  "children": [
+    {
+      "name": "Lễ hỏi",
+      "steps": [
+        "Chuẩn bị sính lễ",
+        "Chọn ngày lành tháng tốt",
+        "Lễ rước dâu"
+      ]
+    },
+    {
+      "name": "Lễ cưới",
+      "steps": [
+        "Lễ thành hôn",
+        "Tiệc cưới"
+      ]
+    }
+  ]
+}

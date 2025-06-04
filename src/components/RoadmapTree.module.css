@@ -1,0 +1,23 @@
+.rd3t-node circle {
+  stroke: #4F46E5; /* Indigo-600 */
+  stroke-width: 3px;
+  fill: #EEF2FF; /* Indigo-100 */
+}
+
+.rd3t-node text {
+  fill: #1E40AF; /* Indigo-900 */
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.rd3t-leaf-node circle {
+  stroke: #10B981; /* Emerald-500 */
+  stroke-width: 2px;
+  fill: #D1FAE5; /* Emerald-100 */
+}
+
+.rd3t-leaf-node text {
+  fill: #065F46; /* Emerald-900 */
+  font-weight: 600;
+  font-size: 0.9rem;
+}
